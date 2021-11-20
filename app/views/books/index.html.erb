@@ -2,19 +2,20 @@
   <%#= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", class:"rounded-circle"; %>, 
   <table class="table">
     <tboy>
+      <%#= link_to post_image_path(post_image.id) do %>
+        <%#= attachment_image_tag post_image, :image %>
+      <%# end %>
       <tr>
-        <th><%#= attachment_image_tag book, :image, size: "63,x63", format: 'jpeg' %></th>  
+        <th>投稿ユーザー画像：<%#= image_tag('sample-author1.jpg') %></th>
       </tr>
       <tr>
-        <th>name</th>
-        <th></th>
+        <th>name:<%= @user.name %> </th>  
+      </tr>  
+      <tr>
+        <th>introduction:<%#= @user.introduction %></th>
       </tr>
       <tr>
-        <th>introduction</th>
-        <th></th>
-      </tr>
-      <tr>
-        <th><%#= link_to "o", edit_user_path(@user) %></th>
+        <th><%= link_to "Sign Up", user_session_path, class: "fas fa fa-user-cog @book" %></th>
       </tr>
     </tboy>  
   </table>
@@ -36,7 +37,7 @@
     </div>
   <% end %>
 
-<h2>Books</h2>
+<h2>Users</h2>
   <table class="table table-hover table-inverse">
       <thead>
         <tr>
