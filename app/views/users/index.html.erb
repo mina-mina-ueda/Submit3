@@ -2,11 +2,9 @@
   <div class='row'>
     <div class='col-md-3'>
         <h2>User info</h2>
-        <table class="table">
-          <tbody>
-            <tr>
-              <th><%= attachment_image_tag @user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "63x63" %></th>
-            </tr>
+            <%= attachment_image_tag @user, :profile_image, format: 'jpeg', fallback: "no_image.jpg", size: "63x63" %>
+          <table class="table">
+          <tbody> 
             <tr>
               <th>name</th>
               <th><%= @user.name %> </th>  

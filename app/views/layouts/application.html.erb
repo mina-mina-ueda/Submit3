@@ -20,10 +20,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-  
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
-
               <li>
                 <%= link_to "Home", new_user_registration_path, class: 'fas fa-home nav-link text-light' %>
               </li>
@@ -54,7 +52,6 @@
               <li>
                 <%= link_to "Log in", new_user_session_path, class: 'fas fa-sign-in-alt nav-link text-light' %>
               </li>
-           
             <% end %>
             </ul>
           </div>
@@ -62,11 +59,9 @@
       </nav>
     </header>
     <main>
-        <p id="notice"><%= notice %></p>
-        <%= yield %>
+      <p id="notice"><%= notice %></p>
+      <%= yield %>
       </main>
-
-    
     <footer>
       <div class="container mt-5">
         <div class="row">
