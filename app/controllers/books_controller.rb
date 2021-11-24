@@ -14,6 +14,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id 
+    # binding.pry
     if @book.save
       flash[:notice] = "You have created book successfully."
       redirect_to book_path(@book.id)
@@ -39,7 +40,7 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book =Book.find(params[:id])
+    @book = Book.find(params[:id])
     @book.destroy
     redirect_to books_path
   end
